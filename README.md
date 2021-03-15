@@ -1,5 +1,5 @@
 # PHOTO_BOOM
-PhotoBoom - Fotoğraf galerisi özelliğinde bir web sitesi projesidir.
+PhotoBoom - Fotoğraf galerisi özelliğinde bir web sitesi projesidir. (ASP.NET Core MVC - MS-SQL Server)
 
 Projenin Çalıştırılması İçin Gerekenler,
 
