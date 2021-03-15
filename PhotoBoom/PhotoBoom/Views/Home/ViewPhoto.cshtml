@@ -1,0 +1,15 @@
+﻿@model PhotosViewModel
+@{
+    ViewData["Title"] = "ViewPhoto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Photo.Title</h1>
+    <h3>Tags: @Model.Photo.Tags</h3>
+    <div style="margin: 0 auto; display:inline-block;height: 400px;width: 400px;">
+        <img src="~/photos/@Model.Photo.PhotoName" asp-append-version="true" class="img-fluid mb-2">
+    </div>
+    <div>
+        <a asp-action="PhotoDelete" asp-route-id="@Model.Photo.PhotoId" asp-route-photoname="@Model.Photo.PhotoName">Delete photo</a>
+    </div>
+</div>

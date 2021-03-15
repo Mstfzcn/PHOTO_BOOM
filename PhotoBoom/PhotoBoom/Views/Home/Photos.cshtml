@@ -1,0 +1,28 @@
+﻿@model PhotosViewModel
+@{
+    ViewData["Title"] = "Photos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">My Photos</h1>
+    @if (Model.ShowNoPhotoMsg)
+    {
+        <p>You don’t have any photos yet ;(</p>
+    }
+        <div style="margin: 0 auto; display:inline-block;">
+            @if (Model.PhotoList != null)
+            {
+                foreach (var item in Model.PhotoList)
+                {
+                    <div style="float: left; display: inline-block;height: 100px;width: 200px;margin: 10px;">
+                        <a asp-action="ViewPhoto" asp-route-id="@item.PhotoId">
+                            <img src="~/photos/@item.PhotoName" asp-append-version="true" class="img-fluid mb-2">
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+        <div style="margin-top:100px; vertical-align: top">
+            <a asp-action="AddPhoto">Add photo</a>
+        </div>
+</div>
